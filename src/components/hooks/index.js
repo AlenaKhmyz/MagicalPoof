@@ -1,10 +1,27 @@
-import { useEffect, useMemo, useCallback } from "react";
+import {
+  useEffect,
+  useMemo,
+  useCallback,
+  useLayoutEffect,
+  useState,
+} from "react";
 import { linkToAudio } from "../../audio";
 
 export const useExplosion = () => {
   var mp3explosion = linkToAudio;
 
   var prefixes = useMemo(() => [("webkit", "moz", "ms", "")]);
+
+  const [width, setWidth] = useState(0);
+
+  useLayoutEffect(() => {
+    function updateWidth() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", updateWidth);
+    updateWidth();
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
   const prefixedEvent = useCallback((element, type, callback) => {
     for (var p = 0; p < prefixes.length; p++) {
@@ -53,35 +70,39 @@ export const useExplosion = () => {
     return $particle;
   });
 
-  const explode = useCallback(($container) => {
-    var particles = [];
+  const explode = useCallback(
+    ($container) => {
 
-    particles.push(createParticle(0, 0, 1));
-    particles.push(createParticle(50, -15, 0.4));
-    particles.push(createParticle(50, -105, 0.2));
-    particles.push(createParticle(-10, -60, 0.8));
-    particles.push(createParticle(-10, 60, 0.4));
-    particles.push(createParticle(-50, -60, 0.2));
-    particles.push(createParticle(-50, -15, 0.75));
-    particles.push(createParticle(-100, -15, 0.4));
-    particles.push(createParticle(-100, -15, 0.2));
-    particles.push(createParticle(-100, -115, 0.2));
-    particles.push(createParticle(80, -15, 0.1));
+      var particles = [];
 
-    particles.forEach(function (particle) {
-      $container.appendChild(particle);
-      prefixedEvent(particle, "AnimationEnd", function () {
-        var self = this;
-        setTimeout(function () {
-          requestAnimationFrame(function () {
-            $container.removeChild(self);
-          });
-        }, 100);
+      particles.push(createParticle(0, 0, 1));
+      particles.push(createParticle(50, -15, 0.4));
+      particles.push(createParticle(50, -105, 0.2));
+      particles.push(createParticle(-10, -60, 0.8));
+      particles.push(createParticle(-10, 60, 0.4));
+      particles.push(createParticle(-50, -60, 0.2));
+      particles.push(createParticle(-50, -15, 0.75));
+      particles.push(createParticle(-100, -15, 0.4));
+      particles.push(createParticle(-100, -15, 0.2));
+      particles.push(createParticle(-100, -115, 0.2));
+      particles.push(createParticle(80, -15, 0.1));
+
+      particles.forEach(function (particle) {
+        $container.appendChild(particle);
+        prefixedEvent(particle, "AnimationEnd", function () {
+          var self = this;
+          setTimeout(function () {
+            requestAnimationFrame(function () {
+              $container.removeChild(self);
+            });
+          }, 100);
+        });
       });
-    });
-  });
+    },
+  );
 
   const exolpodeGroup = useCallback((x, y, trans) => {
+    
     var $container = document.createElement("div");
 
     $container.className = "container";
