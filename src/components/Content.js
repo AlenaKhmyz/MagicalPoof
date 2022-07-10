@@ -1,38 +1,22 @@
 import React, { useLayoutEffect, useState } from "react";
-import "./styles/main.css";
-import magicalpoof from "./image/logo.png";
-import { useExplosion } from "./components/hooks";
-import SocialMedia from "./components/SocialMedia";
+import "../styles/main.css";
+import magicalpoof from "../image/logo.png";
+import SocialMedia from "./SocialMedia";
 
-const Main = () => {
-  useExplosion();
+const Content = () => {
   const name = "";
   const link = "";
-  const [size, setSize] = useState(0);
-  // useLayoutEffect(() => {
-  //   function updateSize() {
-  //     setSize(window.innerWidth);
-  //   }
-  //   window.addEventListener("resize", updateSize);
-  //   updateSize();
-  //   return () => window.removeEventListener("resize", updateSize);
-  // }, []);
-
-  // console.log(size)
-  // if(size >= 900) {
-  //   useExplosion()
-  // }
+  // const [size, setSize] = useState(0);
 
   return (
     <div className="main">
-      {/* <div id="canvas" className="magical"></div> */}
       <img src={magicalpoof} className="logo" />
       <iframe
         className="player"
         src="https://player.twitch.tv/?channel=smarty_69&parent=www.example.com"
-        autoplay="true"
-        frameborder="0"
-        allowfullscreen="true"
+        autoPlay={true}
+        frameBorder="0"
+        allowFullScreen={true}
         scrolling="yes"
       ></iframe>
       <hr className="line"></hr>
@@ -51,4 +35,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Content;

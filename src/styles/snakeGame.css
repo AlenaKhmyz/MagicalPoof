@@ -1,7 +1,15 @@
 .game-area {
     position: relative;
-    width: 100vw;
+    width: 100vh;
     height: 100vh;
+}
+
+@media all and (min-width: 1000px) {
+  .game-area {
+    position: static;
+    width: 100vw;
+  }
+
 }
 
 .snake-dot {
