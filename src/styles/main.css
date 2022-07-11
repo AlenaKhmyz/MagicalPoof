@@ -688,7 +688,9 @@ h1 {
 }
 
 .player {
-  padding: 80px 0;
+  height: 55%;
+  width: 90%;
+  padding: 10px 0;
 }
 
 .list-social-media {
@@ -740,29 +742,36 @@ h1 {
   width: 95%;
 }
 
-@media all and (max-width: 1050px) {
+@media all and (max-width: 1400px) {
+  .main {
+    width: 100vw;
+  }
+
   .logo {
-    width: 620px;
+    width: 700px;
+    margin: 20px 0px;
+    padding: 0px;
   }
 
   .player {
-    width: 100%;
+    width: 90%;
     height: 54%;
     padding: 0px;
   }
 
   .line {
-    width: 55%;
-    margin-top: 2%;
+    width: 85%;
+    margin-top: 1%;
   }
 
   .title {
     font-size: 35px;
-    margin-top: 2%;
   }
 
   .block-social-media {
-    margin: 2% 0% 8% 0%;
+    display: flex;
+    width: 100%;
+    margin: 2% 0.5%;
   }
 
   .social-media {
@@ -770,81 +779,137 @@ h1 {
   }
 }
 
-@media all and (max-width: 900px) {
-  .logo {
-    padding: 100px 0px 0px 0px;
-    width: 500px;
+@media all and (max-width: 915px) {
+  .main {
+    width: 100vw;
   }
 
   .player {
-    width: 100%;
-    height: 50%;
+    width: 90%;
+    height: 54%;
     padding: 0px;
   }
 
+  .line {
+    width: 80%;
+    margin: 1% 0% 0% 0%;
+  }
+
   .title {
-    font-size: 30px;
-    margin-top: 2%;
+    font-size: 25px;
+    margin: 0.5%;
   }
 
   .block-social-media {
-    margin-bottom: 8%;
+    display: flex;
+    width: 90%;
+    margin: 0.5% 2%;
   }
 
-  .line {
-    width: 60%;
+  .circle {
+    margin: 2px 3px 0px;
+    width: 3px;
+    height: 3px;
   }
 
   .social-media {
-    font-size: 15px;
+    font-size: 10px;
   }
 }
 
 @media all and (max-width: 800px) {
-  .player {
-    height: 50%;
-    width: 70%;
-  }
-
-  .line {
-    width: 70%;
-  }
-}
-
-@media all and (max-width: 550px) {
-  .player {
-    width: 45%;
-    height: 50%;
-  }
-
   .logo {
-    padding: 20px 0px 0px 0px;
-    width: 300px;
+    width: 500px;
+    padding: 0px;
+    margin: 5px 0px;
   }
 
-  .line {
-    width: 39%;
+  .player {
+    height: 60%;
+    width: 90%;
   }
 
   .title {
-    margin-top: 2%;
-    font-size: 25px;
+    font-size: 15px;
+    margin: 0.5%;
+  }
+
+  .circle {
+    margin: 1px 1px 0px;
+    width: 2px;
+    height: 2px;
+  }
+
+  .social-media {
+    font-size: 8px;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .main {
+    width: 100vw;
+  }
+
+  .logo {
+    margin: 5px 0px;
+    padding: 0px;
+    width: 400px;
+  }
+
+  .player {
+    width: 90%;
+    height: 60%;
+  }
+
+  .line {
+    width: 90%;
+    margin: 0.5%;
+  }
+
+  .title {
+    margin-top: 0.5%;
+    font-size: 10px;
   }
 
   .list-social-media {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .social-media {
+    font-size: 8px;
   }
 }
 
 @media all and (max-width: 410px) {
   .logo {
-    padding: 60px 0px 0px 0px;
+    padding: 0px;
     width: 300px;
+    margin: 0px 0px 20px;
   }
 
   .player {
-    width: 43%;
+    width: 100%;
     height: 50%;
+  }
+
+  .title {
+    margin-top: 1%;
+    font-size: 20px;
+  }
+
+  .list-social-media {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .block-social-media {
+    width: 90%;
+    margin: 5% 0.5%;
+  }
+
+  .social-media {
+    font-size: 14px;
   }
 }
 
@@ -888,67 +953,136 @@ h1 {
 
 @media all and (max-width: 390px) {
   .main {
-    justify-content: flex-start;
+    width: 100vw;
+    /* justify-content: flex-start; */
   }
 
   .logo {
-    padding: 30px 0px 0px 0px;
-    width: 300px;
-  }
-
-  .player {
-    width: 50%;
-    height: 50%;
-  }
-
-  .line {
-    width: 38%;
-  }
-
-  .title {
-    margin-top: 2%;
-    font-size: 25px;
-  }
-
-  .list-social-media {
-    flex-direction: column;
-  }
-
-  .block-social-media {
-    margin-bottom: 13px;
-  }
-
-  .social-media {
-    font-size: 15px;
-  }
-
-  .circle {
-    width: 3px;
-    height: 3px;
-  }
-}
-
-@media all and (max-width: 290px) {
-  .logo {
-    padding: 20px 0px 0px 0px;
+    padding: 5px 0px 0px 0px;
+    margin: 0px;
     width: 200px;
   }
 
   .player {
-    width: 37%;
+    width: 90%;
+    height: 50%;
+  }
+
+  .line {
+    width: 90%;
+    height: 1px;
+  }
+
+  .title {
+    margin: 0%;
+    font-size: 15px;
+  }
+
+  .list-social-media {
+    display: flex;
+    flex-direction: column;
+    height: 12%;
+  }
+
+  .block-social-media {
+    display: flex;
+    margin: 0px;
+    align-items: center;
+    height: 30%;
+  }
+
+  .social-media {
+    font-size: 10px;
+  }
+
+  .circle {
+    width: 0.8px;
+    height: 0.8px;
+    margin: 0px 0.2px 0.2px;
+  }
+}
+
+@media all and (max-width: 290px) {
+  .main {
+    width: 100vw;
+  }
+
+  .logo {
+    padding: 5px 0px 0px 0px;
+    width: 200px;
+    margin: 0px;
+  }
+
+  .player {
+    width: 90%;
     height: 55%;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 10px;
+  }
+
+  .list-social-media {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .block-social-media {
+    display: flex;
+    margin: 1px 0px;
+    align-items: center;
   }
 
   .social-media {
-    font-size: 11px;
+    font-size: 5px;
+  }
+
+  .circle {
+    width: 0.8px;
+    height: 0.8px;
+    margin: 0px 0.2px 0.2px;
   }
 }
 
-@media all and (width: 1024px) {
+ @media all and (max-height: 180px) { 
+    .main {
+      overflow-y: auto;
+    }
+    
+    .logo {
+      width: 100px;
+    }
+
+    .player {
+      width: 90%;
+      height: 50%;
+      overflow-y: auto;
+    }
+
+    .title {
+      font-size: 10px;
+    }
+
+    .list-social-media {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .block-social-media {
+    margin: 2px;
+  }
+
+  .social-media {
+    font-size: 5px;
+  }
+
+  .circle {
+    display: none;
+  }
+ }
+
+
+/* @media all and (width: 1024px) {
   .game-area {
     width: 100%;
   }
@@ -1036,5 +1170,87 @@ h1 {
     height: 7px;
     margin: 6px 3px 3px 0px;
   }
-
 }
+
+@media all and (width: 768px) {
+  .logo {
+    padding: 0px;
+    width: 710px;
+  }
+
+  .main {
+    width: 100vw;
+  }
+
+  .player {
+    height: 50%;
+    width: 90%;
+    margin: 20px 0px;
+  }
+
+  .line {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .block-social-media {
+    display: flex;
+    margin: 2%;
+  }
+
+  .list-social-media {
+    width: 90%;
+  }
+
+  .circle {
+    margin: 3px;
+    width: 7px;
+    height: 7px;
+  }
+
+  .social-media {
+    font-size: 17px;
+  }
+}
+
+@media all and (width: 960px) {
+  .main {
+    width: 100vw;
+  }
+
+  .logo {
+    padding: 0px;
+    margin: 10px 0px;
+  }w
+
+  .player {
+    width: 95%;
+    height: 50%;
+  }
+
+  .line {
+    width: 85%;
+    margin-top: 2%;
+  }
+
+  .title {
+    font-size: 35px;
+    margin: 0.5% 0%;
+  }
+
+  .list-social-media {
+    width: 95%;
+  }
+
+  .block-social-media {
+    margin: 1% 0.5%;
+    display: flex;
+  }
+
+  .circle {
+    margin: 6px 3px;
+  }
+} */
