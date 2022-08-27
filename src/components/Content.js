@@ -6,7 +6,6 @@ import SocialMedia from "./SocialMedia";
 const Content = () => {
   const name = "";
   const link = "";
-  // const [size, setSize] = useState(0);
 
   return (
     <div className="main">

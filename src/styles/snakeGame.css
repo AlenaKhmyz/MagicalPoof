@@ -17,18 +17,6 @@
   }
 }
 
-/* @media all and (width: 768px) {
-  .game-area {
-    width: 100%;
-  }
-}
-
-@media all and (width: 960px) {
-  .game-area {
-    width: 100%;
-  }
-} */
-
 .snake-dot {
   position: absolute;
   width: 2%;
